@@ -12,6 +12,7 @@
 	--fs-l: 2rem;
 	--fs-m: 1.5rem;
 	--fs-s: 0.9rem;
+	--fs-xs: 0.5rem;
 
 	--gap-1: 1rem;
 	--gap-1-5: 1.5rem;
@@ -174,4 +175,52 @@ img {
 	font-family: var(--fw-3);
 	font-size: var(--fs-s);
 	letter-spacing: 0.5ch;
+}
+
+.footer {
+	background-color: var(--black);
+	padding: var(--gap-3) 0;
+	display: grid;
+	justify-items: center;
+	gap: var(--gap-2);
+}
+
+.footer__logo {
+	width: 10rem;
+}
+
+.footer__menu {
+	display: flex;
+	flex-direction: column;
+	gap: var(--gap-1-5);
+}
+
+.footer__item {
+	color: var(--white);
+	font-family: var(--fw-3);
+	font-size: var(--fs-s);
+	list-style: none;
+	text-align: center;
+	cursor: pointer;
+}
+
+.footer__socials {
+	display: flex;
+	gap: var(--gap-1);
+}
+
+.footer__text {
+	color: var(--dark-gray);
+	text-align: center;
+	font-family: var(--fw-3);
+	font-size: var(--fs-s);
+}
+
+.footer__attribution {
+	font-size: var(--fs-xs);
+	color: var(--very-dark-gray);
+}
+
+.footer__link {
+	color: var(--dark-gray);
 }
