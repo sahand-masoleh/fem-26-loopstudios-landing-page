@@ -50,11 +50,31 @@ img {
 
 .nav__logo {
 	width: 10rem;
+	z-index: 1;
 }
 
 .nav__menu {
 	display: none;
 	position: absolute;
+	background-color: var(--black);
+	color: var(--white);
+	left: 0;
+	right: 0;
+	top: 0;
+	bottom: 0;
+	z-index: 0;
+	flex-direction: column;
+	gap: var(--gap-2);
+	padding: var(--gap-1-5);
+	justify-content: center;
+}
+
+.nav__item {
+	list-style: none;
+	font-family: var(--fw-4);
+	font-size: var(--fs-m);
+	text-transform: uppercase;
+	cursor: pointer;
 }
 
 .nav__hamburger {
@@ -63,14 +83,19 @@ img {
 	width: 2rem;
 	aspect-ratio: 2;
 	cursor: pointer;
+	z-index: 1;
 }
 
 .nav__hamburger-input {
 	display: none;
 }
 
-.nav__hamburger-input:checked + .nav__menu {
-	display: unset;
+.nav__hamburger-input:checked ~ .nav__menu {
+	display: flex;
+}
+
+.nav__hamburger-input:checked ~ .nav__hamburger {
+	background: center / contain no-repeat url(./images/icon-close.svg);
 }
 
 .banner__slogan {
@@ -82,7 +107,6 @@ img {
 	padding: var(--gap-1);
 	outline: 2px solid var(--white);
 	line-height: 1.5ch;
-	width: min-content;
 }
 
 .main {
