@@ -8,14 +8,17 @@
 
 	--fw-3: "Alata", sans-serif;
 	--fw-4: "Josefin Sans", sans-serif;
-	--fs-xl: 2.5rem;
+	--fs-xl: 2.6rem;
 	--fs-l: 2rem;
-	--fs-m: 0.9rem;
+	--fs-m: 1.5rem;
+	--fs-s: 0.9rem;
 
-	--gap-1: min(1rem, 5%);
-	--gap-2: min(2rem, 10%);
-	--gap-2-5: min(2.5rem, 12.5%);
-	--gap-5: min(5rem, 20%);
+	--gap-1: 1rem;
+	--gap-1-5: 1.5rem;
+	--gap-2: 2rem;
+	--gap-2-5: 2.5rem;
+	--gap-3: 3rem;
+	--gap-5: 5rem;
 }
 
 * {
@@ -24,15 +27,15 @@
 }
 
 img {
+	display: block;
 	width: 100%;
-	height: auto;
 	object-fit: cover;
 }
 
 .banner {
 	background: center / cover no-repeat url(./images/mobile/image-hero.jpg);
 	height: 40rem;
-	padding: var(--gap-2-5) var(--gap-2);
+	padding: var(--gap-2-5) var(--gap-1-5);
 	display: grid;
 	grid-template-rows: auto 1fr;
 	align-items: center;
@@ -78,10 +81,14 @@ img {
 	padding: var(--gap-1);
 	outline: 2px solid var(--white);
 	line-height: 1.5ch;
+	width: min-content;
 }
 
 .main {
-	padding: var(--gap-5) var(--gap-2);
+	padding: var(--gap-5) var(--gap-1-5);
+	display: flex;
+	flex-direction: column;
+	gap: 1rem;
 }
 
 .primary {
@@ -91,7 +98,7 @@ img {
 .primary__article {
 	display: flex;
 	flex-direction: column;
-	gap: var(--gap-2);
+	gap: var(--gap-1-5);
 	padding: var(--gap-2-5) var(--gap-1);
 	text-align: center;
 }
@@ -108,7 +115,63 @@ img {
 .primary__text {
 	font-family: var(--fw-3);
 	font-weight: 300;
-	font-size: var(--fs-m);
+	font-size: var(--fs-s);
 	color: var(--dark-gray);
 	line-height: 2.5ch;
+}
+
+.creations {
+	display: grid;
+	justify-items: center;
+	gap: 1.5rem;
+	grid-template-rows: min-content repeat(8, min-content) [second-to-last-line] min-content;
+}
+
+.creations__title {
+	font-family: var(--fw-4);
+	font-weight: 400;
+	font-size: var(--fs-l);
+	color: var(--black);
+	text-transform: uppercase;
+	line-height: 1.5ch;
+}
+
+.thumb {
+	position: relative;
+}
+
+.thumb::before {
+	content: "";
+	position: absolute;
+	height: 100%;
+	width: 100%;
+	top: 0;
+	left: 0;
+	background-image: linear-gradient(to right, #00000050, transparent);
+}
+
+.thumb__title {
+	position: absolute;
+	bottom: var(--gap-3);
+	left: var(--gap-1);
+	font-family: var(--fw-4);
+	font-weight: 400;
+	font-size: var(--fs-m);
+	color: var(--white);
+	width: 9ch;
+	text-transform: uppercase;
+	line-height: 1.5ch;
+}
+
+.creations__button {
+	grid-row: second-to-last-line;
+	width: fit-content;
+	padding: 1ch 5ch;
+	border: none;
+	outline: 2px solid var(--black);
+	background-color: transparent;
+	text-transform: uppercase;
+	font-family: var(--fw-3);
+	font-size: var(--fs-s);
+	letter-spacing: 0.5ch;
 }
