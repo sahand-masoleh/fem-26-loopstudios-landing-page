@@ -8,4 +8,107 @@
 
 	--fw-3: "Alata", sans-serif;
 	--fw-4: "Josefin Sans", sans-serif;
+	--fs-xl: 2.5rem;
+	--fs-l: 2rem;
+	--fs-m: 0.9rem;
+
+	--gap-1: min(1rem, 5%);
+	--gap-2: min(2rem, 10%);
+	--gap-2-5: min(2.5rem, 12.5%);
+	--gap-5: min(5rem, 20%);
+}
+
+* {
+	padding: 0;
+	margin: 0;
+}
+
+img {
+	width: 100%;
+	height: auto;
+	object-fit: cover;
+}
+
+.banner {
+	background: center / cover no-repeat url(./images/mobile/image-hero.jpg);
+	height: 40rem;
+	padding: var(--gap-2-5) var(--gap-2);
+	display: grid;
+	grid-template-rows: auto 1fr;
+	align-items: center;
+}
+
+.nav {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
+.nav__logo {
+	width: 10rem;
+}
+
+.nav__menu {
+	display: none;
+	position: absolute;
+}
+
+.nav__hamburger {
+	display: block;
+	background: center / contain no-repeat url(./images/icon-hamburger.svg);
+	width: 2rem;
+	aspect-ratio: 2;
+	cursor: pointer;
+}
+
+.nav__hamburger-input {
+	display: none;
+}
+
+.nav__hamburger-input:checked + .nav__menu {
+	display: unset;
+}
+
+.banner__slogan {
+	font-family: var(--fw-4);
+	font-weight: 400;
+	font-size: var(--fs-xl);
+	color: var(--white);
+	text-transform: uppercase;
+	padding: var(--gap-1);
+	outline: 2px solid var(--white);
+	line-height: 1.5ch;
+}
+
+.main {
+	padding: var(--gap-5) var(--gap-2);
+}
+
+.primary {
+	display: grid;
+}
+
+.primary__article {
+	display: flex;
+	flex-direction: column;
+	gap: var(--gap-2);
+	padding: var(--gap-2-5) var(--gap-1);
+	text-align: center;
+}
+
+.primary__title {
+	font-family: var(--fw-4);
+	font-weight: 400;
+	font-size: var(--fs-l);
+	color: var(--black);
+	text-transform: uppercase;
+	line-height: 1.5ch;
+}
+
+.primary__text {
+	font-family: var(--fw-3);
+	font-weight: 300;
+	font-size: var(--fs-m);
+	color: var(--dark-gray);
+	line-height: 2.5ch;
 }

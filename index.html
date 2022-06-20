@@ -11,11 +11,11 @@
 
 <body>
   <header class="banner">
-    <nav class="nav">
+    <nav class="banner__nav nav">
       <img src="./images/logo.svg" alt="" class="nav__logo">
-      <label class="nav__fake-button fake-button">
-        <input type="checkbox" class="fake-button__input">
+      <label class="nav__hamburger" for="hamburger">
       </label>
+      <input type="checkbox" class="nav__hamburger-input" id="hamburger">
       <ul class="nav__menu">
         <li class="nav__item">About</li>
         <li class="nav__item">Careers</li>
@@ -24,16 +24,16 @@
         <li class="nav__item">Support</li>
       </ul>
     </nav>
-    <h1 class="header__slogan">
+    <h1 class="banner__slogan">
       Immersive experiences that deliver
     </h1>
   </header>
 
   <main class="main">
     <section class="primary">
-      <picture class="primary__image">
+      <picture class="primary__picture">
         <source srcset="./images/desktop/image-interactive.jpg" media="(min-width: 480px)">
-        <img src="./images/mobile//image-interactive.jpg" alt="" class="pirmary__picture">
+        <img src="./images/mobile//image-interactive.jpg" alt="">
       </picture>
       <div class="primary__article">
         <h2 class="primary__title">
