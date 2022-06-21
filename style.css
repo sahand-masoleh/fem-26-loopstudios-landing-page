@@ -8,9 +8,9 @@
 
 	--fw-3: "Alata", sans-serif;
 	--fw-4: "Josefin Sans", sans-serif;
-	--fs-xl: 2.6rem;
-	--fs-l: 2rem;
-	--fs-m: 1.5rem;
+	--fs-xl: clamp(2.6rem, 10vw, 4.6rem);
+	--fs-l: clamp(2rem, 8vw, 3.2rem);
+	--fs-m: clamp(1.5rem, 6vw, 2rem);
 	--fs-s: 0.9rem;
 	--fs-xs: 0.5rem;
 
@@ -20,6 +20,7 @@
 	--gap-2-5: 2.5rem;
 	--gap-3: 3rem;
 	--gap-5: 5rem;
+	--gap-10: clamp(1.5rem, 12vw, 10rem);
 }
 
 * {
@@ -46,6 +47,8 @@ img {
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
+	width: 100%;
+	margin: 0 auto;
 }
 
 .nav__logo {
@@ -61,11 +64,11 @@ img {
 	left: 0;
 	right: 0;
 	top: 0;
-	bottom: 0;
+	height: 40rem;
 	z-index: 0;
 	flex-direction: column;
 	gap: var(--gap-2);
-	padding: var(--gap-1-5);
+	padding: var(--gap-2-5) var(--gap-1-5);
 	justify-content: center;
 }
 
@@ -126,6 +129,7 @@ img {
 	gap: var(--gap-1-5);
 	padding: var(--gap-2-5) var(--gap-1);
 	text-align: center;
+	background-color: var(--white);
 }
 
 .primary__title {
@@ -247,4 +251,49 @@ img {
 
 .footer__link {
 	color: var(--dark-gray);
+}
+
+@media screen and (min-width: 480px) {
+	.banner {
+		background: center / cover no-repeat url(./images/desktop/image-hero.jpg);
+		height: 32rem;
+		padding: var(--gap-5) var(--gap-10);
+	}
+
+	.nav {
+		max-width: 70rem;
+	}
+
+	.nav__logo {
+		width: 12rem;
+		z-index: 1;
+	}
+	.banner__slogan {
+		padding: var(--gap-2) var(--gap-2-5);
+		max-width: 36rem;
+	}
+
+	.main {
+		padding: var(--gap-10);
+		gap: var(--gap-10);
+	}
+
+	.primary {
+		grid-template-columns: repeat(auto-fill, 10%);
+		grid-template-rows: repeat(auto-fill, 33%);
+	}
+
+	.primary__article {
+		padding: 0;
+		padding-top: var(--gap-5);
+		padding-left: var(--gap-5);
+		text-align: left;
+		grid-column: 6/11;
+		grid-row: 2/4;
+	}
+
+	.primary__picture {
+		grid-column: 1/7;
+		grid-row: 1/4;
+	}
 }
