@@ -266,8 +266,26 @@ img {
 
 	.nav__logo {
 		width: 12rem;
-		z-index: 1;
 	}
+
+	.nav__menu {
+		position: unset;
+		background-color: unset;
+		height: unset;
+		padding: unset;
+		flex-direction: row;
+	}
+
+	.nav__item {
+		text-transform: unset;
+		font-family: var(--fw-3);
+		font-size: var(--fs-s);
+	}
+
+	.nav__hamburger {
+		display: none;
+	}
+
 	.banner__slogan {
 		padding: var(--gap-2) var(--gap-2-5);
 		max-width: 36rem;
