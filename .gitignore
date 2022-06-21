@@ -15,6 +15,7 @@
 .DS_Store
 .prettierignore
 
-/*.md
+/style-guide.md
 /demo/.*png
 /design/
+/screenshots/*.png
