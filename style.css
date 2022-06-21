@@ -325,4 +325,28 @@ img {
 		bottom: var(--gap-2);
 		left: var(--gap-2);
 	}
+
+	.footer {
+		padding: var(--gap-3) var(--gap-10);
+		justify-items: start;
+		gap: var(--gap-2);
+		grid-template-columns: 1fr 1fr;
+		grid-template-rows: 1fr 1fr;
+	}
+
+	.footer__menu {
+		flex-direction: row;
+		gap: var(--gap-2-5);
+		grid-row: 2/3;
+	}
+
+	.footer__socials {
+		justify-self: end;
+		gap: var(--gap-1);
+	}
+
+	.footer__text {
+		justify-self: end;
+		text-align: end;
+	}
 }
