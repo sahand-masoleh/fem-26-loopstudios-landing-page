@@ -30,8 +30,8 @@ Users should be able to:
 
 ### Built with
 
-- SASS
-- React
+- HTML
+- CSS
 
 ## Author
 
